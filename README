@@ -11,7 +11,7 @@ salary-scraper
   $ perl bin/create-login-conf.pl > config/login.conf
   Name: 私野名前
   Password: MyPassword
-  Login URL: https://url-of-login-path/
+  Login URL: https://url-of-login/page
   Data directory: path/to/directory/for/scraped/data
 
 氏名とパスワードは Base64 符号化されて保存されます。残念ながら
