@@ -1,0 +1,39 @@
+salary-scraper
+~~~~~~~~~~~~~~
+
+給与明細データを拾ってきて扱いやすいテキストデータにします。
+
+* 初期設定
+
+  $ git clone git://github.com/wakaba/salary-scraper
+  $ cd salary-scraper
+  $ make
+  $ perl bin/create-login-conf.pl > config/login.conf
+  Name> 私野名前
+  Password> MyPassword
+  Login URL> https://url-of-login-path/
+  Data directory: path/to/directory/for/scraped/data
+
+氏名とパスワードは Base64 符号化されて保存されます。残念ながら
+Base64 は暗号ではありません。
+
+* 実行
+
+  $ perl bin/salary.pl config/login.conf
+
+給与明細・賞与明細の HTML ファイルを全部拾ってきて保存します。
+
+  $ perl bin/html2text.pl path/to/directory/for/scraped/data
+
+拾ってきた HTML ファイルから金額を取り出して TSV 形式にします。
+
+* 著者
+
+若葉 (id:wakabatan) <w@suika.fam.cx>。
+
+* ライセンス
+
+Copyright 2012 Wakaba <w@suika.fam.cx>.
+
+This program is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
