@@ -1,0 +1,12 @@
+[submodule "modules/perl-web-useragent-functions"]
+	path = modules/perl-web-useragent-functions
+	url = git://github.com/wakaba/perl-web-useragent-functions.git
+[submodule "modules/perl-web-utils"]
+	path = modules/perl-web-utils
+	url = git://github.com/wakaba/perl-web-utils.git
+[submodule "modules/manakai"]
+	path = modules/manakai
+	url = git://github.com/wakaba/manakai.git
+[submodule "modules/perl-charclass"]
+	path = modules/perl-charclass
+	url = git://github.com/wakaba/perl-charclass.git
