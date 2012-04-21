@@ -21,6 +21,7 @@ use MIME::Base64 qw(decode_base64);
 
 my $config_f = file (shift);
 my ($Name, $Password, $LoginURL, $DataDirName) = ($config_f->slurp);
+chomp $_ for $Name, $Password, $LoginURL, $DataDirName;
 $Name = decode 'utf-8', decode_base64 $Name;
 $Password = decode 'utf-8', decode_base64 $Password;
 my $DataD = dir ($DataDirName);
